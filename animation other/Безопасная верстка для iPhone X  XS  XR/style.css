@@ -1,0 +1,5 @@
+.box {
+  padding: 12px;
+  padding-left: env(safe-area-inset-left); /*автоматически */
+  padding-top: env(safe-area-inset-top, 10px); /*указанные */
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Liquid</title>
+</head>
+<body>
+    <div class="container">
+        <svg class="svg">
+            <filter id="gooey">
+                <feGaussianBlur in="SourseGraphic" stdDeviation="10"/>
+                <feColorMatrix values="
+                            1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 20 -10">
+                </feColorMatrix>
+            </filter>
+        </svg>
+        <div class="preloader">
+            <span class="item" style="--i: 1"></span>
+            <span class="item" style="--i: 2"></span>
+            <span class="item" style="--i: 3"></span>
+            <span class="item" style="--i: 4"></span>
+            <span class="item" style="--i: 5"></span>
+            <span class="item" style="--i: 6"></span>
+            <span class="item" style="--i: 7"></span>
+            <span class="item" style="--i: 8"></span>
+            <span class="rotate" style="--j: 0"></span>
+            <span class="rotate" style="--j: 1"></span>
+            <span class="rotate" style="--j: 2"></span>
+            <span class="rotate" style="--j: 3"></span>
+            <span class="rotate" style="--j: 4"></span>
+        </div>
+    </div>
+</body>
+</html>

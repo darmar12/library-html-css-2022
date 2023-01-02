@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: sans-serif;
+}
+
+.check {
+    padding-left: 1.2em;
+}
+
+.option {
+    display: block;
+    margin-bottom: .25em;
+}
+
+.check_input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.check__box {
+    position: absolute;
+    margin-left: -1.2em;
+    width: 1em;
+    height: 1em;
+    background-image: url(images/off.svg);
+}
+
+.check_input:checked + .check__box {
+    background-image: url(images/on.svg);
+}
+
+.check_input:focus + .check__box {
+    background-image: url(images/off-focused.svg);
+}
+
+.check_input:checked:focus + .check__box {
+    background-image: url(images/on-focused.svg);
+}
+
+.check_input:disabled + .check__box {
+    background-image: url(images/off-disabled.svg);
+}
+
+.check_input:checked:disabled + .check__box {
+    background-image: url(images/on-disabled.svg);
+}
+

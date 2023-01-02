@@ -1,0 +1,44 @@
+.grid::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+
+    --grid-sides: 16px;
+    --grid-gutter: 16px;
+    --grid-colums: 4;
+    --grid-colums-width: calc((100% - var(--grid-gutter) * var(--grid-colums)) / var(--grid-colums));
+    --grid-color: rgb(255 0 0/ .1);
+
+    border: solid #fff;
+    border-width: 0 calc(var(--grid-sides) - var(--grid-gutter) / 2);
+
+    background-image: repeating-linear-gradient(
+        to right,
+        transparent 0,
+        transparent calc(var(--grid-gutter) / 2),
+        var(--grid-color) calc(var(--grid-gutter) / 2),
+        var(--grid-color) calc(var(--grid-colums-width) + var(--grid-gutter) / 2),
+        transparent calc(var(--grid-colums-width) + var(--grid-gutter) / 2),
+        transparent calc(var(--grid-colums-width) + var(--grid-gutter))
+    );
+
+    background-repeat: no-repeat;
+}
+
+@media(min-width: 736px) {
+    .grid::before {
+        --grid-sides: 24px;
+        --grid-colums: 8;
+    }
+}
+
+@media(min-width: 1010px) {
+    .grid::before {
+        --grid-sides: 32px;
+        --grid-colums: 12;
+    }
+}

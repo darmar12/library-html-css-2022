@@ -1,0 +1,7 @@
+.box {
+  background-image: url(http://tpverstak.ru/wp-content/uploads/2017/05/kitty.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}

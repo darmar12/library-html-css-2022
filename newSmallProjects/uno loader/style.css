@@ -1,0 +1,71 @@
+body {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation: loader 2s linear infinite;
+}
+
+.circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.circle--red {
+    background-color: red;
+    box-shadow: 0 0 20px 5px red;
+    top: 10px;
+    left: calc(50% - 15px);
+    animation: circle-red 4s infinite;
+}
+
+.circle--green {
+    background-color: green;
+    box-shadow: 0 0 20px 5px green;
+    bottom: 0;
+    left: 0;
+    animation: circle-green 4s infinite;
+}
+
+.circle--blue {
+    background-color: blue;
+    box-shadow: 0 0 20px 5px blue;
+    bottom: 0;
+    right: 0;
+    animation: circle-blue 4s infinite;
+}
+
+@keyframes circle-red {
+    50% {
+        top: 30px;
+    }
+}
+
+@keyframes circle-green {
+    50% {
+        bottom: 30px;
+        left: 30px;
+    }
+}
+
+@keyframes circle-blue {
+    50% {
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}

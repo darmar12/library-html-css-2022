@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.preloader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.preloader:hover {
+  background-color: #03e9f4;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+}
+
+.preloader__item {
+  position: absolute;
+  display: block;
+}
+
+.preloader__item:first-child {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: firstLine 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.preloader__item:nth-child(2) {
+  top: -100%;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: secondLine 1s linear infinite;
+  animation-delay: 0s;
+}
+
+.preloader__item:nth-child(3) {
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: thirdLine 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.preloader__item:last-child {
+  top: -100%;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #03e9f4);
+  animation: lastLine 1s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes firstLine {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes secondLine {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes thirdLine {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes lastLine {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}

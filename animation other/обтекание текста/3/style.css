@@ -1,0 +1,55 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  background-color: #f4f4f4;
+}
+
+svg {
+  margin: auto;
+  width: 50%;
+  max-height: 100%;
+}
+
+svg circle {
+  fill: red;
+}
+
+.shape {
+  width: 50px;
+  height: 100%;
+  shape-margin: 3px;
+}
+
+.shape-left {
+  float: left;
+  shape-outside: url(images.png);
+}
+
+.shape-right {
+  float: right;
+  shape-outside: url(images.png);
+}
+
+.text {
+  color: #fff;
+  font-size: 4px;
+  width: 100px;
+  height: 110%;
+  text-align: center;
+  line-height: 1.6;
+  hyphens: auto;
+}
+
+h1 {
+  font-size: 7px;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+  text-align-last: center;
+}
